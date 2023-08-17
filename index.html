@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+  <title>Verificador de Paridade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Verificador de Paridade</h1>
+  <label for="numberInput">Insira um valor inteiro:</label>
+  <input type="number" id="numberInput">
+  <button onclick="checkParity()">Verificar</button>
+  <p id="result"></p>
+
+  <script>
+    function checkParity() {
+      var number = parseInt(document.getElementById("numberInput").value);
+      var resultElement = document.getElementById("result");
+
+      if (isNaN(number)) {
+        resultElement.textContent = "Por favor, insira um valor válido.";
+      } else if (number % 2 === 0) {
+        resultElement.textContent = "O valor é par.";
+      } else {
+        resultElement.textContent = "O valor é ímpar.";
+      }
+    }
+  </script>
+</body>
+</html>
